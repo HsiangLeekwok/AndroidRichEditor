@@ -38,6 +38,11 @@ RE.insertAudio = function (src) {
 ```Java
 mEditor.getMarkdown();
 ```
+
+#### 4. Editor 页面增加 meta 设置，以便在插入图片时自动缩放视图
+```HTML
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+```
 -------
 ### 引用和感谢：
 
