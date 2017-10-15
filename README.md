@@ -10,7 +10,7 @@
 
 ### 更改
 
-在 ![wasabeef/richeditor-android](https://github.com/wasabeef/richeditor-android) 项目的基础上增加了以下内容：
+在 [wasabeef/richeditor-android](https://github.com/wasabeef/richeditor-android) 项目的基础上增加了以下内容：
 
 #### 1. 插入视频
 
@@ -59,11 +59,21 @@ mEditor.getMarkdown();
 mEditor.replaceText(localUrl, remoteUrl);
 ```
 
--------
+------
+### 使用
+
+1. clone后自己编译得到aar或直接 [这里下载](https://github.com/HsiangLeekwok/AndroidRichEditor/blob/master/release/richeditor-release.aar?raw=true) 已编译好的aar
+2. 将aar放入项目中的libs目录
+3. 加入引用到项目中
+```gradle
+compile(name: 'richeditor-release', ext: 'aar')
+```
+4. 其他实际使用方式，参见 [wasabeef/richeditor-android](https://github.com/wasabeef/richeditor-android) 的说明即可
+------
 ### 引用和感谢：
 
 感谢这些先驱付出者！
 
-![wasabeef/richeditor-android](https://github.com/wasabeef/richeditor-android)
+[wasabeef/richeditor-android](https://github.com/wasabeef/richeditor-android)
 
-![domchristie/to-markdown](https://github.com/domchristie/to-markdown)
+[domchristie/to-markdown](https://github.com/domchristie/to-markdown)
