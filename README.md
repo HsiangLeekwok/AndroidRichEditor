@@ -52,12 +52,11 @@ mEditor.getMarkdown();
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
 ```
 
-
-#### 5. 增加 replace 方法
+#### 5. 增加 replaceText 方法
 
 插入图片、视频、音频、其他类型的附件时，可以先插入本地路径占用编辑位，等上传完毕之后，再用上传之后得到的网络路径来替换掉本地路径
 ```Java
-mEditor.replace(localUrl, remoteUrl);
+mEditor.replaceText(localUrl, remoteUrl);
 ```
 
 -------
