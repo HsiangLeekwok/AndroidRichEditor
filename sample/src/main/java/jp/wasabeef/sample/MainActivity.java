@@ -224,7 +224,7 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.action_insert_image).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                mEditor.insertImage("https://pandao.github.io/editor.md/images/logos/editormd-logo-180x180.png", "dachshund", 120, 100);
+                mEditor.insertImage("https://pandao.github.io/editor.md/images/logos/editormd-logo-180x180.png", "dachshund");
             }
         });
 
