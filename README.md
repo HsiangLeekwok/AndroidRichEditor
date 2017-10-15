@@ -63,6 +63,8 @@ mEditor.replace(localUrl, remoteUrl);
 -------
 ### 引用和感谢：
 
+感谢这些先驱付出者！
+
 ![wasabeef/richeditor-android](https://github.com/wasabeef/richeditor-android)
 
 ![domchristie/to-markdown](https://github.com/domchristie/to-markdown)
