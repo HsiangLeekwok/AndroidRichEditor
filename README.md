@@ -2,6 +2,12 @@
 
 ## Android 多媒体 WYSAWYG 编辑器
 
+效果预览(实际项目中的应用截图)
+
+![](https://github.com/HsiangLeekwok/AndroidRichEditor/blob/master/art/Screenshot_2017-10-14-17-56-30.png)
+![](https://github.com/HsiangLeekwok/AndroidRichEditor/blob/master/art/Screenshot_2017-10-14-17-56-41.png)
+![](https://github.com/HsiangLeekwok/AndroidRichEditor/blob/master/art/QQ20171014204853.png)
+
 在 ![wasabeef/richeditor-android](https://github.com/wasabeef/richeditor-android) 项目的基础上增加了以下内容：
 
 #### 1. 插入视频
