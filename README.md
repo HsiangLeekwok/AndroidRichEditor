@@ -8,6 +8,8 @@
 ![](https://github.com/HsiangLeekwok/AndroidRichEditor/blob/master/art/Screenshot_2017-10-14-17-56-41.png)
 ![](https://github.com/HsiangLeekwok/AndroidRichEditor/blob/master/art/QQ20171014204853.png)
 
+### 更改
+
 在 ![wasabeef/richeditor-android](https://github.com/wasabeef/richeditor-android) 项目的基础上增加了以下内容：
 
 #### 1. 插入视频
@@ -52,8 +54,10 @@ mEditor.getMarkdown();
 
 
 #### 5. 增加 replace 方法
-```
+
 插入图片、视频、音频、其他类型的附件时，可以先插入本地路径，等上传完毕之后，再用上传之后得到的网络路径来替换掉本地路径
+```Java
+mEditor.replace(localUrl, remoteUrl);
 ```
 
 -------
