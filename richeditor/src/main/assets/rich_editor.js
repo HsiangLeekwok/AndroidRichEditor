@@ -25,7 +25,7 @@ RE.currentSelection = {
 
 RE.editor = document.getElementById('editor');
 
-document.addEventListener("selectionchange", function () { RE.backuprange(); });
+document.addEventListener("selectionchange", function () { RE.backupRange(); });
 
 // Initializations
 RE.callback = function () {
@@ -49,7 +49,9 @@ RE.getMarkdown = function () {
 }
 
 RE.replaceText = function (from, to) {
-    RE.editor.innerHTML = RE.editor.innerHTML.replace(/from/g, to);
+    var html = RE.getHtml();
+    RE.setHtml(html.replace(/from/g, to));
+    RE.callback();
 }
 
 RE.setBaseTextColor = function (color) {
@@ -140,14 +142,14 @@ RE.setOrderedList = function () {
 }
 
 RE.setTextColor = function (color) {
-    RE.restorerange();
+    RE.restoreRange();
     document.execCommand("styleWithCSS", null, true);
     document.execCommand('foreColor', false, color);
     document.execCommand("styleWithCSS", null, false);
 }
 
 RE.setTextBackgroundColor = function (color) {
-    RE.restorerange();
+    RE.restoreRange();
     document.execCommand("styleWithCSS", null, true);
     document.execCommand('hiliteColor', false, color);
     document.execCommand("styleWithCSS", null, false);
@@ -191,12 +193,12 @@ RE.insertImage = function (url, alt) {
 }
 
 RE.insertHTML = function (html) {
-    RE.restorerange();
+    RE.restoreRange();
     document.execCommand('insertHTML', false, html);
 }
 
 RE.insertLink = function (url, title) {
-    RE.restorerange();
+    RE.restoreRange();
     var sel = document.getSelection();
     if (sel.toString().length == 0) {
         document.execCommand("insertHTML", false, "<a href='" + url + "'>" + title + "</a>");
@@ -235,10 +237,10 @@ RE.setTodo = function (text) {
 }
 
 RE.prepareInsert = function () {
-    RE.backuprange();
+    RE.backupRange();
 }
 
-RE.backuprange = function () {
+RE.backupRange = function () {
     var selection = window.getSelection();
     if (selection.rangeCount > 0) {
         var range = selection.getRangeAt(0);
@@ -251,7 +253,7 @@ RE.backuprange = function () {
     }
 }
 
-RE.restorerange = function () {
+RE.restoreRange = function () {
     var selection = window.getSelection();
     selection.removeAllRanges();
     var range = document.createRange();

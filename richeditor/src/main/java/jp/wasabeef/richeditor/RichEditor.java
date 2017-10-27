@@ -409,6 +409,11 @@ public class RichEditor extends WebView {
         exec("javascript:RE.insertVideo('" + cover + "', '" + src + "');");
     }
 
+    public void insertHtml(String html) {
+        exec("javascript:RE.prepareInsert();");
+        exec("javascript:RE.insertHTML('" + html + "');");
+    }
+
     public void insertTodo() {
         exec("javascript:RE.prepareInsert();");
         exec("javascript:RE.setTodo('" + System.currentTimeMillis() + "');");
