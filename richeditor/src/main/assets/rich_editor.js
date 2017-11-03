@@ -216,7 +216,7 @@ RE.insertLink = function (url, title) {
 }
 
 RE.insertVideo = function (poster, src) {
-    var html = '<br/> <video id="video" controls="controls" preload="none" poster="' + poster + '"> ' +
+    var html = '<br/> <video id="video" controls="controls" preload="none" poster="' + poster + '" webkit-playsinline="true"> ' +
         '<source id="mp4" src="' + src + '" type="video/mp4"> ' +
         'Your user agent does not support the HTML5 Video element.' +
         '</video><br/> ';
@@ -227,7 +227,7 @@ RE.insertAudio = function (src) {
     var html = '<br/> <audio id="audio" controls="controls" preload="none"> ' +
         '<source id="mp3" src="' + src + '" type="audio/mp3"> ' +
         'Your user agent does not support the HTML5 Audio element. ' +
-        '</video><br/> ';
+        '</audio><br/> ';
     RE.insertHTML(html);
 }
 
