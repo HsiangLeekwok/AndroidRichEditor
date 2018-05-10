@@ -50,6 +50,6 @@ def getKeyAliasPasswordProperty() {
 }
 
 dependencies {
-  compile project(':richeditor')
-  compile "com.android.support:appcompat-v7:${SUPPORT_PACKAGE_VERSION}"
+  implementation project(':richeditor')
+  api "com.android.support:appcompat-v7:${SUPPORT_PACKAGE_VERSION}"
 }
