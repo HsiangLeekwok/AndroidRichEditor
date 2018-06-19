@@ -13,18 +13,20 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-
+var imgs = ["lehehe.jpg", "potu.jpg", "loading_img_1.gif", "loading_img_2.gif", "loading_img_3.gif", "loading_img_4.gif", "loading_img_5.gif"];
 $(document).ready(function () {
     $("img").bind("error", function () {
         var obj = $(this);
+        $(obj).attr("cache-src", $(obj).attr("src"));
+        var index = Math.ceil(Math.random() * 100) % imgs.length;
+        $(obj).attr("src", imgs[index]);
         setTimeout(function () {
-            var src = $(obj).attr("src");
-            var index = src.indexOf("#");
-            if (index >= 0) {
-                src = src.substring(0, index);
-            }
-            src += "#" + (new Date().getTime());
+            var src = $(obj).attr("cache-src");
             $(obj).attr("src", src);
-        }, 5000);
+        }, 10000);
+    }).bind("load", function(){
+        if($(this).attr("src").indexOf("http") == 0) {
+            $(this).removeAttr("cache-src");
+        }
     });
 });
